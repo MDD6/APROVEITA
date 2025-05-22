@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aproveita</title>
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2a0e1c3f2.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      background-color: #f9f9f9;
+      padding-top: 70px;
+    }
+
+    .navbar {
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .grid-cards {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+      .grid-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .grid-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background-color: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar Fixa com Ícones -->
+  <nav class="navbar fixed-top navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="https://uol.unifor.br/acesso/app/autenticacao/"><img src="logo.png" alt="Logo" width="40"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="home.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sobre.html"><i class="fas fa-link"></i>Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-calendar-check"></i>Conteudos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-bell"></i>Salvo</a>
+          </li>
+        </ul>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <div class="container my-5">
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="IW.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Internationalization Week</h5>
+            <p> promove entre os dias 19 e 23 de maio a segunda edição da Semana da Internacionalização (Internationalization Week) com o tema "People and Nature: Good Vibes, Good News". </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="INOVA .jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="BannerMateria.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Tutorial de Utilização do App "Aproveita
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+             Navegação (Menu Superior)
+Sobre: Informações do app.
+
+Trabalhos: Acompanhe seus prazos.
+
+Conteúdos: Acesso a materiais.
+
+
+🗓️ Cards de Matérias
+Clique no card para expandir.
+
+Veja datas de provas e trabalhos.
+
+Marque como "Concluído" usando o botão de alternância (switch).
+
+🎠 Carrossel de Eventos
+Fique por dentro dos eventos e novidades.
+
+📑 Dicas Extras
+Use o painel de "Dicas de Organização" para melhorar sua produtividade.
+
+📱 Responsivo
+Funciona perfeitamente em celulares, tablets e PCs.
+            </div>
+          </div>
+        </div>
+    <h1 class="text-center mb-3">Aproveita</h1>
+    <p class="text-center mb-5">Sua plataforma de organização acadêmica. Acompanhe matérias, conteúdos e lembretes de avaliações, tudo em um só lugar.</p>
+
+    <div class="grid-cards">
+
+      <!-- Cards de Matérias e Funcionalidades -->
+      <div class="card" data-bs-toggle="collapse" data-bs-target="#collapseDes" aria-expanded="false" aria-controls="collapseDes">
+        <img src="des.jpg" class="card-img-top" alt="Ambientes de Desenvolvimento">
+        <div class="card-body">
+          <h5 class="card-title">Programação Web</h5>
+          <p class="card-text">Cronograma de avaliações e trabalhos.</p>
+          <div class="collapse" id="collapseDes">
+            <div class="card card-body">
+              <ul>
+                <li><strong>📅 AV1: 10 de Abril de 2025</strong>
+                  <ul>
+                    <li>Introdução ao HTML e CSS</li>
+                    <li>Fundamentos de JavaScript</li>
+                    <li>Estruturação de páginas responsivas</li>
+                  </ul>
+                  📅 <strong>Trabalho: 15 de Abril de 2025</strong> — Criação de uma página web estática utilizando HTML e CSS.
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switchAV1Web">
+                    <label class="form-check-label" for="switchAV1Web">Concluído</label>
+                  </div>
+                </li>
+                <li><strong>📅 AV2: 15 de Maio de 2025</strong>
+                  <ul>
+                    <li>Manipulação do DOM com JavaScript</li>
+                    <li>Introdução a frameworks front-end (ex.: React)</li>
+                    <li>Consumo de APIs REST</li>
+                  </ul>
+                  📅 <strong>Trabalho: 20 de Maio de 2025</strong> — Desenvolvimento de uma aplicação web com consumo de API.
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switchAV2Web">
+                    <label class="form-check-label" for="switchAV2Web">Concluído</label>
+                  </div>
+                </li>
+                <li><strong>📅 AV3: 20 de Junho de 2025</strong>
+                  <ul>
+                    <li>Gerenciamento de estado em aplicações web</li>
+                    <li>Otimização de performance</li>
+                    <li>Deploy de aplicações web</li>
+                  </ul>
+                  📅 <strong>Trabalho: 25 de Junho de 2025</strong> — Publicação de uma aplicação web funcional em um serviço de hospedagem.
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="switchAV3Web">
+                    <label class="form-check-label" for="switchAV3Web">Concluído</label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-bs-toggle="collapse" data-bs-target="#collapseOIP" aria-expanded="false" aria-controls="collapseOIP">
+        <img src="OIP.jpeg" class="card-img-top" alt="Banco de Dados">
+        <div class="card-body">
+          <h5 class="card-title">Banco de Dados</h5>
+          <p class="card-text">Cronograma de avaliações e trabalhos.</p>
+          <div class="collapse" id="collapseOIP">
+            <div class="card card-body">
+              <ul>
+                <li><strong>📅 AV1: 12 de Abril de 2025</strong>
+                  <ul>
+                    <li>Modelagem de dados (MER)</li>
+                    <li>Introdução ao SQL</li>
+                    <li>Criação de tabelas e relacionamentos</li>
+                  </ul>
+                  📅 <strong>Trabalho: 17 de Abril de 2025</strong> — Modelagem e criação de um banco de dados para um sistema fictício.
+                </li>
+                <li><strong>📅 AV2: 17 de Maio de 2025</strong>
+                  <ul>
+                    <li>Consultas SQL avançadas</li>
+                    <li>Normalização de dados</li>
+                    <li>Índices e performance</li>
+                  </ul>
+                  📅 <strong>Trabalho: 22 de Maio de 2025</strong> — Desenvolvimento de consultas SQL para um banco de dados existente.
+                </li>
+                <li><strong>📅 AV3: 22 de Junho de 2025</strong>
+                  <ul>
+                    <li>Backup e recuperação de dados</li>
+                    <li>Introdução a bancos NoSQL</li>
+                    <li>Integração de banco de dados com aplicações</li>
+                  </ul>
+                  📅 <strong>Trabalho: 27 de Junho de 2025</strong> — Implementação de um banco de dados NoSQL para um projeto prático.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-bs-toggle="collapse" data-bs-target="#collapsePOO" aria-expanded="false" aria-controls="collapsePOO">
+        <img src="R.jpeg" class="card-img-top" alt="Engenharia de Software">
+        <div class="card-body">
+          <h5 class="card-title">Engenharia de Software</h5>
+          <p class="card-text">Cronograma de avaliações e trabalhos.</p>
+          <div class="collapse" id="collapsePOO">
+            <div class="card card-body">
+              <ul>
+                <li><strong>📅 AV1: 15 de Abril de 2025</strong>
+                  <ul>
+                    <li>Ciclo de vida de desenvolvimento de software</li>
+                    <li>Metodologias ágeis (Scrum e Kanban)</li>
+                    <li>Levantamento de requisitos</li>
+                  </ul>
+                  📅 <strong>Trabalho: 20 de Abril de 2025</strong> — Criação de um backlog de produto para um projeto fictício.
+                </li>
+                <li><strong>📅 AV2: 20 de Maio de 2025</strong>
+                  <ul>
+                    <li>Modelagem UML (casos de uso, diagramas de classe)</li>
+                    <li>Planejamento de sprints</li>
+                    <li>Testes de software</li>
+                  </ul>
+                  📅 <strong>Trabalho: 25 de Maio de 2025</strong> — Desenvolvimento de diagramas UML para um sistema proposto.
+                </li>
+                <li><strong>📅 AV3: 25 de Junho de 2025</strong>
+                  <ul>
+                    <li>Gerenciamento de configuração</li>
+                    <li>Métricas de qualidade de software</li>
+                    <li>Documentação de projetos</li>
+                  </ul>
+                  📅 <strong>Trabalho: 30 de Junho de 2025</strong> — Elaboração de um plano de testes e documentação de um projeto.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-bs-toggle="collapse" data-bs-target="#collapseEAD" aria-expanded="false" aria-controls="collapseEAD">
+        <img src="E.jpeg" class="card-img-top" alt="Redes de Computadores">
+        <div class="card-body">
+          <h5 class="card-title">Redes de Computadores</h5>
+          <p class="card-text">Cronograma de avaliações e trabalhos.</p>
+          <div class="collapse" id="collapseEAD">
+            <div class="card card-body">
+              <ul>
+                <li><strong>📅 AV1: 18 de Abril de 2025</strong>
+                  <ul>
+                    <li>Fundamentos de redes (topologias, protocolos)</li>
+                    <li>Modelo OSI</li>
+                    <li>Endereçamento IP</li>
+                  </ul>
+                  📅 <strong>Trabalho: 23 de Abril de 2025</strong> — Configuração de uma rede local em simulador.
+                </li>
+                <li><strong>📅 AV2: 23 de Maio de 2025</strong>
+                  <ul>
+                    <li>Roteamento e comutação</li>
+                    <li>Protocolos de transporte (TCP/UDP)</li>
+                    <li>Segurança em redes</li>
+                  </ul>
+                  📅 <strong>Trabalho: 28 de Maio de 2025</strong> — Configuração de roteamento estático e dinâmico.
+                </li>
+                <li><strong>📅 AV3: 28 de Junho de 2025</strong>
+                  <ul>
+                    <li>Redes sem fio</li>
+                    <li>Monitoramento e análise de tráfego</li>
+                    <li>Redes definidas por software (SDN)</li>
+                  </ul>
+                  📅 <strong>Trabalho: 03 de Julho de 2025</strong> — Implementação de uma rede sem fio segura.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-bs-toggle="collapse" data-bs-target="#collapseCyber" aria-expanded="false" aria-controls="collapseCyber">
+        <img src="C.jpeg" class="card-img-top" alt="Desenvolvimento Mobile">
+        <div class="card-body">
+          <h5 class="card-title">Desenvolvimento Mobile</h5>
+          <p class="card-text">Cronograma de avaliações e trabalhos.</p>
+          <div class="collapse" id="collapseCyber">
+            <div class="card card-body">
+              <ul>
+                <li><strong>📅 AV1: 20 de Abril de 2025</strong>
+                  <ul>
+                    <li>Introdução ao desenvolvimento mobile</li>
+                    <li>Estrutura de projetos em Android/iOS</li>
+                    <li>Interface de usuário (UI/UX) para mobile</li>
+                  </ul>
+                  📅 <strong>Trabalho: 25 de Abril de 2025</strong> — Criação de uma interface de aplicativo simples.
+                </li>
+                <li><strong>📅 AV2: 25 de Maio de 2025</strong>
+                  <ul>
+                    <li>Consumo de APIs em aplicativos mobile</li>
+                    <li>Armazenamento local (SQLite, SharedPreferences)</li>
+                    <li>Gerenciamento de ciclo de vida</li>
+                  </ul>
+                  📅 <strong>Trabalho: 30 de Maio de 2025</strong> — Desenvolvimento de um aplicativo com consumo de API.
+                </li>
+                <li><strong>📅 AV3: 30 de Junho de 2025</strong>
+                  <ul>
+                    <li>Publicação de aplicativos em lojas (Play Store/App Store)</li>
+                    <li>Notificações push</li>
+                    <li>Testes e debugging</li>
+                  </ul>
+                  📅 <strong>Trabalho: 05 de Julho de 2025</strong> — Publicação de um aplicativo funcional em uma loja de aplicativos.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-bs-toggle="collapse" data-bs-target="#collapseCalendar" aria-expanded="false" aria-controls="collapseCalendar">
+        <img src="calendario.jpg" class="card-img-top" alt="Computação em Nuvem">
+        <div class="card-body">
+          <h5 class="card-title">Computação em Nuvem</h5>
+          <p class="card-text">Cronograma de avaliações e trabalhos.</p>
+          <div class="collapse" id="collapseCalendar">
+            <div class="card card-body">
+              <ul>
+                <li><strong>📅 AV1: 22 de Abril de 2025</strong>
+                  <ul>
+                    <li>Fundamentos de computação em nuvem</li>
+                    <li>Modelos de serviço (IaaS, PaaS, SaaS)</li>
+                    <li>Principais provedores de nuvem</li>
+                  </ul>
+                  📅 <strong>Trabalho: 27 de Abril de 2025</strong> — Configuração de uma máquina virtual em um provedor de nuvem.
+                </li>
+                <li><strong>📅 AV2: 27 de Maio de 2025</strong>
+                  <ul>
+                    <li>Armazenamento em nuvem</li>
+                    <li>Gerenciamento de custos</li>
+                    <li>Segurança em ambientes de nuvem</li>
+                  </ul>
+                  📅 <strong>Trabalho: 01 de Junho de 2025</strong> — Implementação de um sistema de armazenamento em nuvem.
+                </li>
+                <li><strong>📅 AV3: 02 de Julho de 2025</strong>
+                  <ul>
+                    <li>Orquestração de containers (Docker, Kubernetes)</li>
+                    <li>Monitoramento e escalabilidade</li>
+                    <li>Automação de infraestrutura</li>
+                  </ul>
+                  📅 <strong>Trabalho: 07 de Julho de 2025</strong> — Deploy de uma aplicação utilizando containers em nuvem.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-bs-toggle="collapse" data-bs-target="#collapseNotas" aria-expanded="false" aria-controls="collapseNotas">
+        <img src="notas.jpg" class="card-img-top" alt="Notas e Avaliações">
+        <div class="card-body">
+          <h5 class="card-title">Notas e Desempenho</h5>
+          <p class="card-text">Acompanhe suas notas e visualize seu progresso acadêmico.</p>
+          <div class="collapse" id="collapseNotas">
+            <div class="card card-body">
+              <ul>
+                <li>Histórico de notas</li>
+                <li>Média ponderada</li>
+                <li>Projeção de desempenho</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-bs-toggle="collapse" data-bs-target="#collapseFoco" aria-expanded="false" aria-controls="collapseFoco">
+        <img src="foco.jpg" class="card-img-top" alt="Foco e Produtividade">
+        <div class="card-body">
+          <h5 class="card-title">Foco e Produtividade</h5>
+          <p class="card-text">Ferramentas e técnicas para manter seu foco durante os estudos.</p>
+          <div class="collapse" id="collapseFoco">
+            <div class="card card-body">
+              <ul>
+                <li>Gestão de tempo</li>
+                <li>Eliminação de distrações</li>
+                <li>Uso de técnicas como Pomodoro</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-bs-toggle="collapse" data-bs-target="#collapseCommunity" aria-expanded="false" aria-controls="collapseCommunity">
+        <img src="comunidade.jpg" class="card-img-top" alt="Comunidade e Suporte">
+        <div class="card-body">
+          <h5 class="card-title">Comunidade e Suporte</h5>
+          <p class="card-text">Participe de grupos, tire dúvidas e troque conhecimentos com colegas.</p>
+          <div class="collapse" id="collapseCommunity">
+            <div class="card card-body">
+              <ul>
+                <li>Fóruns de discussão</li>
+                <li>Grupos de estudo</li>
+                <li>Plataformas de suporte técnico</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Aproveita - Todos os direitos reservados.
+        @matheusddresch
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function checkDates() {
+      const today = new Date();
+      const dates = [
+        { date: new Date('2025-04-10'), label: 'AV1 de Programação Web' },
+        { date: new Date('2025-05-15'), label: 'AV2 de Programação Web' },
+        { date: new Date('2025-06-20'), label: 'AV3 de Programação Web' },
+        // Add other dates here
+      ];
+
+      dates.forEach(event => {
+        const diffTime = event.date - today;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        if (diffDays === 10 || diffDays === 5 || diffDays === 2) {
+          alert(`Atenção! Faltam ${diffDays} dias para ${event.label}.`);
+        }
+      });
+    }
+
+    checkDates();
+  </script>
+  <script>
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function (e) {
+          const collapseElement = this.querySelector('.collapse');
+          if (collapseElement) {
+            const isExpanded = collapseElement.classList.contains('show');
+            document.querySelectorAll('.collapse.show').forEach(openCollapse => {
+              if (openCollapse !== collapseElement) {
+                openCollapse.classList.remove('show');
+              }
+            });
+            if (!isExpanded) {
+              collapseElement.classList.add('show');
+            } else {
+              collapseElement.classList.remove('show');
+            }
+          }
+          e.stopPropagation();
+        });
+      });
+    </script>
+</body>
+</html>
